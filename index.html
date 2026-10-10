@@ -1,0 +1,78 @@
+<!doctype html>
+<html lang="el">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="theme-color" content="#12395b">
+<title>Βασιλείου Αλέξανδρος | Αγρονόμος Τοπογράφος Μηχανικός</title>
+<style>
+:root{--navy:#12395b;--blue:#1e5d89;--sky:#d9eaf5;--ink:#18344d;--muted:#62778a}
+*{box-sizing:border-box}
+body{margin:0;min-height:100vh;background:linear-gradient(135deg,#eaf1f7,#d9e4ed);font-family:Arial,Helvetica,sans-serif;color:var(--ink);display:flex;justify-content:center;align-items:center;padding:22px}
+.card{width:min(100%,470px);background:#fff;border-radius:26px;overflow:hidden;box-shadow:0 18px 55px #102d4729;border:1px solid #ffffff}
+.top{background:linear-gradient(145deg,#12395b,#1c628e);color:white;padding:32px 28px 28px;position:relative;overflow:hidden}
+.top:after{content:"";position:absolute;width:260px;height:260px;border:1px solid #ffffff22;border-radius:50%;right:-90px;top:-110px;box-shadow:0 0 0 20px #ffffff09,0 0 0 42px #ffffff08}
+.kicker{font-size:12px;letter-spacing:2px;text-transform:uppercase;color:#b9d9ed;font-weight:700;margin-bottom:15px}
+h1{font-size:clamp(28px,7vw,36px);line-height:1.06;margin:0 0 17px;letter-spacing:.3px}
+.rule{width:70px;height:4px;border-radius:4px;background:#7fc4e8;margin:0 0 17px}
+.title{font-size:19px;line-height:1.35;font-weight:700;margin:0 0 10px}
+.university{font-size:14px;line-height:1.5;color:#d6e8f3;margin:0}
+.details{padding:24px 26px 28px}
+.detail{display:flex;gap:14px;align-items:center;padding:13px 0;border-bottom:1px solid #e5edf3}
+.detail:last-of-type{border-bottom:0}
+.icon{width:44px;height:44px;flex:0 0 44px;border-radius:50%;background:#e7f1f8;color:var(--navy);display:flex;align-items:center;justify-content:center;font-size:21px}
+.label{font-size:12px;text-transform:uppercase;letter-spacing:1px;color:var(--muted);font-weight:700;margin-bottom:4px}
+.value{font-size:17px;font-weight:700;color:var(--navy);overflow-wrap:anywhere}
+.value a{color:inherit;text-decoration:none}
+.btn{display:flex;align-items:center;justify-content:center;gap:10px;width:100%;border:0;border-radius:13px;padding:16px 14px;margin-top:20px;background:var(--navy);color:white;font-size:16px;font-weight:700;text-decoration:none;cursor:pointer}
+.btn:active{transform:scale(.99)}
+.note{text-align:center;color:var(--muted);font-size:12px;line-height:1.5;margin:14px 5px 0}
+.footer{text-align:center;padding:0 20px 22px;color:#7b8c9b;font-size:11px}
+</style>
+</head>
+<body>
+<main class="card">
+  <header class="top">
+    <div class="kicker">Ψηφιακή επαγγελματική κάρτα</div>
+    <h1>ΒΑΣΙΛΕΙΟΥ<br>ΑΛΕΞΑΝΔΡΟΣ</h1>
+    <div class="rule"></div>
+    <p class="title">Αγρονόμος Τοπογράφος Μηχανικός</p>
+    <p class="university">Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης (ΑΠΘ)</p>
+  </header>
+  <section class="details">
+    <div class="detail">
+      <div class="icon" aria-hidden="true">☎</div>
+      <div><div class="label">Τηλέφωνο</div><div class="value"><a href="tel:+306998478430">699 847 8430</a></div></div>
+    </div>
+    <div class="detail">
+      <div class="icon" aria-hidden="true">✉</div>
+      <div><div class="label">Email</div><div class="value"><a href="mailto:vasileioual@gmail.com">vasileioual@gmail.com</a></div></div>
+    </div>
+    <button class="btn" id="save">＋ &nbsp; ΑΠΟΘΗΚΕΥΣΗ ΣΤΙΣ ΕΠΑΦΕΣ</button>
+    <p class="note">Πατήστε το κουμπί για να κατεβάσετε την επαγγελματική επαφή και να την προσθέσετε στο βιβλίο επαφών σας.</p>
+  </section>
+  <div class="footer">Βασιλείου Αλέξανδρος · Αγρονόμος Τοπογράφος Μηχανικός</div>
+</main>
+<script>
+document.getElementById('save').addEventListener('click', function(){
+  const vcard = [
+    'BEGIN:VCARD','VERSION:3.0',
+    'N:Βασιλείου;Αλέξανδρος;;;',
+    'FN:Βασιλείου Αλέξανδρος',
+    'TITLE:Αγρονόμος Τοπογράφος Μηχανικός',
+    'ORG:Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης (ΑΠΘ)',
+    'TEL;TYPE=CELL:+306998478430',
+    'EMAIL;TYPE=INTERNET:vasileioual@gmail.com',
+    'NOTE:Αγρονόμος Τοπογράφος Μηχανικός - Αριστοτέλειο Πανεπιστήμιο Θεσσαλονίκης (ΑΠΘ)',
+    'END:VCARD'
+  ].join('\r\n');
+  const blob = new Blob([vcard], {type:'text/vcard;charset=utf-8'});
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url; a.download = 'Vasileiou_Alexandros.vcf';
+  document.body.appendChild(a); a.click(); a.remove();
+  setTimeout(()=>URL.revokeObjectURL(url),1000);
+});
+</script>
+</body>
+</html>
