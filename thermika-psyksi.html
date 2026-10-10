@@ -1,94 +1,78 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="el">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<meta name="theme-color" content="#073763">
+<meta name="theme-color" content="#073b70">
 <title>Βασιλείου Αλέξανδρος | Υδραυλικές, Θερμικές & Ψυκτικές Εγκαταστάσεις</title>
 <style>
-:root{--navy:#073763;--blue:#0789cc;--sky:#49c6f2;--orange:#f47721;--ink:#12395d;--pale:#eff9ff}
-*{box-sizing:border-box}
-body{margin:0;padding:16px 12px 24px;font-family:Arial,Helvetica,sans-serif;color:var(--ink);background:linear-gradient(140deg,#e4f5ff 0%,#fff 54%,#fff0df 100%)}
-.wrap{max-width:760px;margin:0 auto}
-.card{overflow:hidden;background:#fff;border-radius:25px;border:1px solid #d5eaf6;box-shadow:0 18px 50px #07376320}
-.hero{padding:27px 22px 25px;color:#fff;background:linear-gradient(120deg,#062c52 0%,#07599a 70%,#0789cc 100%);position:relative;overflow:hidden}
-.hero:after{content:"";position:absolute;width:250px;height:250px;border:27px solid #ffffff13;border-radius:50%;right:-75px;top:-140px}
-.kicker{font-size:12px;letter-spacing:2.5px;font-weight:700;color:#bdeaff}
-.name{font-size:clamp(25px,5vw,37px);line-height:1.1;font-weight:900;margin:12px 0 10px}
-.tagline{font-size:clamp(16px,3.5vw,23px);line-height:1.35;font-weight:800}
-.tagline .warm{color:#ff9b38}.tagline .cool{color:#8fe2ff}
-.rule{width:100%;height:3px;margin:15px 0 0;background:linear-gradient(90deg,#fff8,#ff8d25,#6bd8ff,transparent);border-radius:4px}
-main{padding:20px}
-.services{display:grid;grid-template-columns:1fr;gap:13px}
-.service{position:relative;border-radius:18px;padding:17px 16px 15px;border:1px solid #d8edf8;background:linear-gradient(135deg,#f1faff,#fff)}
-.service.heat{border-color:#f7dfc7;background:linear-gradient(135deg,#fff7ef,#fff)}
-.service.cool{background:linear-gradient(135deg,#edfaff,#fff)}
-.service-head{display:flex;align-items:center;gap:13px;margin-bottom:10px}
-.icon{width:55px;height:55px;flex:0 0 55px;display:grid;place-items:center;border-radius:50%;background:linear-gradient(145deg,#25b9f4,#0757a5);color:white;font-size:27px;box-shadow:0 5px 14px #087fbd30}
-.heat .icon{background:linear-gradient(145deg,#ffb339,#ec4b16);box-shadow:0 5px 14px #f4772130}
-.service h2{font-size:18px;line-height:1.2;margin:0;color:var(--navy)}
-.service p{margin:3px 0 0;font-size:12px;color:#557084}
-ul{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:1fr;gap:7px}
-li{font-size:14px;line-height:1.35;display:flex;gap:9px;align-items:flex-start}
-.tick{font-size:13px;line-height:18px;text-align:center;width:19px;height:19px;flex:0 0 19px;border-radius:50%;background:#087fbd;color:#fff;font-weight:bold}
-.heat .tick{background:#f47721}
-.qualification{margin-top:15px;border-radius:16px;padding:15px 16px;background:#f4f8fb;border-left:4px solid var(--blue)}
-.qualification h3{font-size:15px;margin:0 0 8px;color:var(--navy)}
-.qualification p{font-size:13px;line-height:1.55;margin:0 0 5px}
-.note{font-size:11px;line-height:1.5;color:#5b7182;margin:12px 1px 0}
-footer{background:linear-gradient(120deg,#05294c,#073763);padding:19px 20px;color:white}
-.contact{display:grid;gap:12px}
-.contact a{display:flex;align-items:center;gap:12px;text-decoration:none;color:#fff;font-size:15px;font-weight:700;overflow-wrap:anywhere}
-.contact-icon{width:35px;height:35px;display:grid;place-items:center;flex:0 0 35px;border-radius:11px;background:linear-gradient(145deg,#ff9a2d,#f05b1b);font-size:18px}
-.place{margin:12px 0 0 47px;color:#d7edfb;font-size:14px}
-.buttons{display:grid;grid-template-columns:1fr 1fr;gap:9px;margin-top:17px}
-.btn{padding:12px 9px;border-radius:11px;text-align:center;text-decoration:none;font-size:13px;font-weight:700}
-.btn.white{background:white;color:#073763}.btn.outline{border:1px solid #ffffff7a;color:#fff}
-.end{text-align:center;font-size:11px;color:#698194;padding:13px 5px 0}
-@media(min-width:600px){body{padding:28px 18px}.hero{padding:32px 32px 27px}main{padding:24px}.services{grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}.service{padding:15px 12px}.service-head{display:block}.icon{margin-bottom:12px}.service h2{font-size:16px;min-height:39px}li{font-size:12px}.contact{grid-template-columns:1fr 1fr}.place{margin-top:12px}}
+:root{--navy:#073b70;--blue:#087bc1;--cyan:#19b8e8;--orange:#ff8a00;--red:#ef392e;--ink:#142b42;--paper:#fff}
+*{box-sizing:border-box}body{margin:0;background:#eaf1f7;color:var(--ink);font-family:Arial,"Noto Sans",sans-serif}
+.wrap{max-width:1100px;margin:18px auto;background:#fff;box-shadow:0 12px 36px #102d4b25;overflow:hidden;border-radius:18px}
+.hero{padding:26px 28px 20px;background:linear-gradient(110deg,#fff 0%,#f2f8fd 55%,#dcecf8 100%);position:relative;border-bottom:5px solid var(--orange)}
+.brand{display:flex;gap:14px;align-items:center}.logo{width:68px;height:68px;flex:0 0 68px;border-radius:17px;background:var(--navy);display:grid;place-items:center;color:#fff;font-size:34px;border:3px solid #d8eaf8}
+h1{margin:0;color:var(--navy);font-size:clamp(25px,4.5vw,43px);line-height:1.05;font-weight:900;letter-spacing:.2px}
+.subtitle{margin:8px 0 0;color:#52677a;font-size:clamp(13px,2vw,17px);font-weight:700}
+.headline{margin:23px 0 8px;font-weight:900;color:var(--navy);font-size:clamp(25px,4.1vw,42px);line-height:1.08}
+.kicker{font-size:clamp(13px,2vw,18px);font-weight:800;letter-spacing:1px;color:#3e5264}
+.services{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;padding:20px 24px;background:#f7fbff}
+.service{border:1px solid #d6e6f4;border-radius:15px;overflow:hidden;background:#fff;box-shadow:0 4px 14px #133b5b12}
+.service-top{padding:16px 10px 12px;text-align:center;color:#fff;min-height:110px}
+.service:nth-child(1) .service-top{background:linear-gradient(135deg,#0569b7,#0d8acb)}
+.service:nth-child(2) .service-top{background:linear-gradient(135deg,#e92f27,#ff6c3b)}
+.service:nth-child(3) .service-top{background:linear-gradient(135deg,#12a9d7,#42c8ed)}
+.ico{font-size:38px;line-height:1.1}.service h2{font-size:clamp(14px,2.2vw,20px);margin:8px 0 0;font-weight:900}
+.service ul{margin:0;padding:14px 14px 16px 29px;font-size:14px;line-height:1.55}
+.service li::marker{color:var(--blue)}
+.collage{display:grid;grid-template-columns:1.05fr 1fr 1fr;gap:8px;padding:0 24px 20px;background:#f7fbff}
+.visual{min-height:160px;position:relative;overflow:hidden;border-radius:13px;background:linear-gradient(135deg,#eaf4fb,#c5deef);display:flex;align-items:center;justify-content:center;text-align:center;color:var(--navy);font-weight:900;padding:12px}
+.visual svg{width:100%;height:100%;position:absolute;inset:0;opacity:.9}
+.visual span{z-index:1;background:#ffffffdc;padding:8px 10px;border-radius:9px;align-self:flex-end}
+.contact{background:var(--navy);color:white;padding:22px 25px;display:grid;grid-template-columns:1fr auto;gap:18px;align-items:center}
+.details{display:grid;gap:12px;font-size:clamp(15px,2.4vw,20px)}.detail{display:flex;gap:12px;align-items:center}.detail b{font-size:22px;width:28px;text-align:center}
+.actions{display:flex;flex-wrap:wrap;gap:9px;padding:18px 22px;background:#f3f8fd;justify-content:center}
+.actions a,.actions button{font:700 15px Arial,sans-serif;text-decoration:none;border:1.5px solid #ff9b28;border-radius:11px;padding:12px 14px;color:var(--navy);background:white;display:inline-flex;align-items:center;justify-content:center;gap:8px;cursor:pointer}
+.actions a:hover,.actions button:hover{background:#fff1df}
+.footer{height:45px;background-color:#073b70;background-image:linear-gradient(135deg,transparent 47%,#4ca3d1 48%,transparent 49%),linear-gradient(45deg,transparent 47%,#4ca3d1 48%,transparent 49%);background-size:28px 28px;color:#d7edff;display:grid;place-items:center;font-size:12px;letter-spacing:2px}
+.note{padding:13px 22px 18px;color:#687b8b;font-size:12px;line-height:1.5;background:#f3f8fd}
+@media(max-width:650px){.wrap{margin:0;border-radius:0}.hero{padding:22px 18px}.logo{width:52px;height:52px;flex-basis:52px;font-size:27px}.services{padding:14px;gap:8px}.service-top{min-height:94px;padding:12px 5px}.ico{font-size:30px}.service ul{font-size:12px;padding:10px 8px 12px 20px}.collage{padding:0 14px 14px;gap:6px}.visual{min-height:120px;font-size:12px;padding:5px}.contact{grid-template-columns:1fr;padding:19px}.actions{padding:13px}.actions a,.actions button{flex:1 1 42%;font-size:13px;padding:11px 8px}}
 </style>
 </head>
 <body>
-<div class="wrap">
-<article class="card">
+<main class="wrap">
 <header class="hero">
-<div class="kicker">ΤΕΧΝΙΚΕΣ ΕΓΚΑΤΑΣΤΑΣΕΙΣ</div>
-<div class="name">ΒΑΣΙΛΕΙΟΥ ΑΛΕΞΑΝΔΡΟΣ</div>
-<div class="tagline"><span>Υδραυλικές</span> · <span class="warm">Θερμικές</span> · <span class="cool">Ψυκτικές</span><br>ΕΓΚΑΤΑΣΤΑΣΕΙΣ</div>
-<div class="rule"></div>
+ <div class="brand"><div class="logo" aria-hidden="true">⌂</div><div><h1>ΒΑΣΙΛΕΙΟΥ ΑΛΕΞΑΝΔΡΟΣ</h1><p class="subtitle">Τεχνικές εγκαταστάσεις κατοικιών και κτιρίων</p></div></div>
+ <div class="headline">ΥΔΡΑΥΛΙΚΕΣ • ΘΕΡΜΙΚΕΣ • ΨΥΚΤΙΚΕΣ</div>
+ <div class="kicker">ΕΓΚΑΤΑΣΤΑΣΕΙΣ · ΣΥΝΤΗΡΗΣΗ · ΕΠΙΣΚΕΥΕΣ</div>
 </header>
-<main>
-<div class="services">
-<section class="service">
-<div class="service-head"><div class="icon">🚰</div><div><h2>Υδραυλικές εγκαταστάσεις</h2><p>Νερό και δίκτυα</p></div></div>
-<ul><li><span class="tick">✓</span><span>Ύδρευση – αποχέτευση</span></li><li><span class="tick">✓</span><span>Είδη υγιεινής</span></li><li><span class="tick">✓</span><span>Εγκατάσταση και αντικατάσταση δικτύων</span></li><li><span class="tick">✓</span><span>Επισκευές και συντηρήσεις</span></li></ul>
+<section class="services" aria-label="Υπηρεσίες">
+ <article class="service"><div class="service-top"><div class="ico">🚰</div><h2>ΥΔΡΑΥΛΙΚΕΣ ΕΓΚΑΤΑΣΤΑΣΕΙΣ</h2></div><ul><li>Ύδρευση – αποχέτευση</li><li>Είδη υγιεινής</li><li>Εγκατάσταση και αντικατάσταση δικτύων</li><li>Επισκευές – συντηρήσεις</li></ul></article>
+ <article class="service"><div class="service-top"><div class="ico">♨️</div><h2>ΘΕΡΜΙΚΕΣ ΕΓΚΑΤΑΣΤΑΣΕΙΣ</h2></div><ul><li>Εγκαταστάσεις θέρμανσης</li><li>Λέβητες – καυστήρες</li><li>Ενδοδαπέδια θέρμανση</li><li>Ηλιακά συστήματα</li><li>Ρυθμίσεις – συντηρήσεις</li></ul></article>
+ <article class="service"><div class="service-top"><div class="ico">❄️</div><h2>ΨΥΚΤΙΚΕΣ ΕΓΚΑΤΑΣΤΑΣΕΙΣ</h2></div><ul><li>Κλιματισμός (A/C)</li><li>Εγκαταστάσεις ψύξης</li><li>Επαγγελματική ψύξη</li><li>Έλεγχος – συντήρηση</li></ul></article>
 </section>
-<section class="service heat">
-<div class="service-head"><div class="icon">♨</div><div><h2>Θερμικές εγκαταστάσεις</h2><p>Θέρμανση και ζεστό νερό</p></div></div>
-<ul><li><span class="tick">✓</span><span>Συστήματα θέρμανσης</span></li><li><span class="tick">✓</span><span>Λέβητες – καυστήρες</span></li><li><span class="tick">✓</span><span>Ενδοδαπέδια θέρμανση</span></li><li><span class="tick">✓</span><span>Ηλιακά συστήματα</span></li><li><span class="tick">✓</span><span>Ρυθμίσεις και συντηρήσεις</span></li></ul>
+<section class="collage" aria-label="Τεχνικές εφαρμογές">
+ <div class="visual"><svg viewBox="0 0 300 180" aria-hidden="true"><rect x="30" y="20" width="240" height="135" rx="6" fill="#fff" stroke="#7ca6c5" stroke-width="3"/><path d="M55 45H245V130H55Z M55 75H245 M105 45V130 M180 45V130" fill="none" stroke="#0b77ba" stroke-width="8"/><path d="M55 90H245 M80 45V130 M210 45V130" fill="none" stroke="#f04432" stroke-width="4"/><circle cx="80" cy="90" r="9" fill="#ff8a00"/><circle cx="210" cy="90" r="9" fill="#ff8a00"/></svg><span>ΛΕΒΗΤΑΣ & ΔΙΚΤΥΑ ΘΕΡΜΑΝΣΗΣ</span></div>
+ <div class="visual"><svg viewBox="0 0 300 180" aria-hidden="true"><rect x="18" y="18" width="264" height="144" rx="8" fill="#e8f5ff" stroke="#8cb6d2" stroke-width="3"/><path d="M30 55H270 M30 80H270 M30 105H270 M30 130H270" stroke="#e93e32" stroke-width="5"/><path d="M48 40V145 M90 40V145 M132 40V145 M174 40V145 M216 40V145 M258 40V145" stroke="#117cc0" stroke-width="5"/><path d="M35 147H265" stroke="#0a3b70" stroke-width="4"/></svg><span>ΕΝΔΟΔΑΠΕΔΙΑ ΘΕΡΜΑΝΣΗ</span></div>
+ <div class="visual"><svg viewBox="0 0 300 180" aria-hidden="true"><rect x="25" y="24" width="250" height="132" rx="8" fill="#fff" stroke="#8cb6d2" stroke-width="3"/><rect x="42" y="40" width="216" height="100" rx="4" fill="#d6eaf8"/><circle cx="205" cy="90" r="35" fill="#fff" stroke="#0b70ad" stroke-width="5"/><circle cx="205" cy="90" r="8" fill="#0b70ad"/><path d="M205 55L219 85L205 90L191 85Z M240 90L210 104L205 90L210 76Z M205 125L191 95L205 90L219 95Z M170 90L200 76L205 90L200 104Z" fill="#0b70ad"/><path d="M42 57H140V123H42Z" fill="#fff" stroke="#0b70ad" stroke-width="4"/></svg><span>ΨΥΞΗ & ΚΛΙΜΑΤΙΣΜΟΣ</span></div>
 </section>
-<section class="service cool">
-<div class="service-head"><div class="icon">❄</div><div><h2>Ψυκτικές εγκαταστάσεις</h2><p>Ψύξη και αερισμός</p></div></div>
-<ul><li><span class="tick">✓</span><span>Κλιματισμός (A/C)</span></li><li><span class="tick">✓</span><span>Εγκαταστάσεις ψύξης</span></li><li><span class="tick">✓</span><span>Επαγγελματική ψύξη</span></li><li><span class="tick">✓</span><span>Αερισμός – εξαερισμός</span></li><li><span class="tick">✓</span><span>Έλεγχος και συντήρηση</span></li></ul>
+<section class="contact">
+ <div class="details">
+  <div class="detail"><b>☎</b><a style="color:white;text-decoration:none" href="tel:+306998478440">699 847 8440</a></div>
+  <div class="detail"><b>✉</b><a style="color:white;text-decoration:none" href="mailto:vasileioual@gmail.com">vasileioual@gmail.com</a></div>
+  <div class="detail"><b>📍</b><span>Θεσσαλονίκη</span></div>
+ </div>
+ <div style="text-align:center"><img src="qr-thermika-psyksi.png" alt="QR code ηλεκτρονικής κάρτας" width="112" height="112" style="background:#fff;padding:7px;border-radius:8px;max-width:100%"><div style="font-size:12px;margin-top:6px">Σάρωσε για την κάρτα</div></div>
 </section>
-</div>
-<section class="qualification">
-<h3>Σπουδές και τεχνική κατάρτιση</h3>
-<p><strong>Ψύξη – Αερισμός – Κλιματισμός:</strong> Τεχνικός Εγκαταστάσεων Ψύξης Αερισμού και Κλιματισμού.</p>
-<p><strong>Θερμικές και Υδραυλικές Εγκαταστάσεις:</strong> Τεχνικών Θερμικών και Υδραυλικών Εγκαταστάσεων και Τεχνολογίας Πετρελαίου και Φυσικού Αερίου.</p>
-</section>
-<p class="note">Οι υπηρεσίες που απαιτούν επαγγελματική άδεια ή ειδική πιστοποίηση παρέχονται μόνο εφόσον πληρούνται οι νόμιμες προϋποθέσεις.</p>
+<nav class="actions" aria-label="Γρήγορες ενέργειες">
+ <a href="tel:+306998478440">☎ Κλήση</a><a href="mailto:vasileioual@gmail.com">✉ Email</a><a href="https://maps.google.com/?q=Thessaloniki" target="_blank" rel="noopener">⌖ Τοποθεσία</a><button type="button" onclick="saveContact()">▣ Αποθήκευση επαφής</button><a href="qr-thermika-psyksi.png" download>▦ QR Code</a>
+</nav>
+<div class="note">Εκπαίδευση: «Τεχνικός Εγκαταστάσεων Ψύξης Αερισμού και Κλιματισμού» και «Τεχνικών Θερμικών και Υδραυλικών Εγκαταστάσεων και Τεχνολογίας Πετρελαίου και Φυσικού Αερίου». Η ανάληψη εργασιών που απαιτούν άδεια ή συγκεκριμένα επαγγελματικά δικαιώματα γίνεται μόνο εφόσον πληρούνται οι νόμιμες προϋποθέσεις.</div>
+<footer class="footer">ΥΔΡΑΥΛΙΚΑ · ΘΕΡΜΑΝΣΗ · ΨΥΞΗ · ΚΛΙΜΑΤΙΣΜΟΣ</footer>
 </main>
-<footer>
-<div class="contact">
-<a href="tel:+306998478440"><span class="contact-icon">☎</span><span>699 847 8440</span></a>
-<a href="mailto:vasileioual@gmail.com"><span class="contact-icon">✉</span><span>vasileioual@gmail.com</span></a>
-</div>
-<div class="place">📍 Θεσσαλονίκη</div>
-<div class="buttons"><a class="btn white" href="contact-thermika.vcf" download>Αποθήκευση επαφής</a><a class="btn outline" href="tel:+306998478440">Τηλεφωνική επικοινωνία</a></div>
-</footer>
-</article>
-<div class="end">Βασιλείου Αλέξανδρος · Θεσσαλονίκη</div>
-</div>
-</body>
-</html>
+<script>
+function saveContact(){
+ const vcf=`BEGIN:VCARD\\nVERSION:3.0\\nN:Βασιλείου;Αλέξανδρος;;;\\nFN:Βασιλείου Αλέξανδρος\\nTEL;TYPE=CELL:6998478440\\nEMAIL:vasileioual@gmail.com\\nADR;TYPE=WORK:;;Θεσσαλονίκη;;;;\\nNOTE:Τεχνικές εγκαταστάσεις υδραυλικών, θερμικών και ψυκτικών συστημάτων. Εκπαιδευτικά προσόντα στους σχετικούς τομείς.\\nEND:VCARD`;
+ const blob=new Blob([vcf],{type:'text/vcard;charset=utf-8'});const a=document.createElement('a');a.href=URL.createObjectURL(blob);a.download='vasileiou-thermika.vcf';document.body.appendChild(a);a.click();a.remove();setTimeout(()=>URL.revokeObjectURL(a.href),1000);
+}
+</script>
+</body></html>
