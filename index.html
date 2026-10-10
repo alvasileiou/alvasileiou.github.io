@@ -4,20 +4,32 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="theme-color" content="#073d5c">
+<meta name="description" content="Βασιλείου Αλέξανδρος, Διπλωματούχος Αγρονόμος και Τοπογράφος Μηχανικός ΑΠΘ. Τοπογραφικές εργασίες, Κτηματολόγιο, αποτυπώσεις, AutoCAD και GIS στη Θεσσαλονίκη.">
 <title>Βασιλείου Αλέξανδρος | Ψηφιακή επαγγελματική κάρτα</title>
 <style>
 *{box-sizing:border-box}
-body{margin:0;background:#e8f0f5;color:#123d57;font-family:Arial,Helvetica,sans-serif}
-main{max-width:980px;margin:0 auto;padding:22px 14px 32px}
+:root{--navy:#073d5c;--blue:#176b98;--ink:#123d57;--muted:#526f80;--line:#d4e1e9;--paper:#fff;--bg:#e8f0f5}
+body{margin:0;background:var(--bg);color:var(--ink);font-family:Arial,Helvetica,sans-serif}
+main{max-width:980px;margin:0 auto;padding:22px 14px 36px}
 .card-wrap{position:relative;width:100%;line-height:0;filter:drop-shadow(0 10px 22px rgba(5,45,70,.16))}
 .card-wrap img{display:block;width:100%;height:auto;border-radius:18px}
 .phone-link{position:absolute;left:30.8%;top:51.5%;width:23%;height:9%;display:block}
 .email-link{position:absolute;left:30.5%;top:73%;width:32%;height:10%;display:block}
 .actions{display:flex;justify-content:center;gap:12px;flex-wrap:wrap;margin-top:22px}
-.actions a{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:52px;padding:13px 20px;border-radius:12px;background:#073d5c;color:#fff;text-decoration:none;font-weight:700;font-size:16px}
-.actions a.secondary{background:#fff;color:#073d5c;border:1px solid #c8d9e3}
-.note{text-align:center;color:#526f80;font-size:14px;line-height:1.5;margin:16px auto 0;max-width:620px}
-@media(max-width:480px){main{padding:14px 8px 24px}.card-wrap img{border-radius:10px}.actions a{width:100%;font-size:15px}}
+.actions a{display:inline-flex;align-items:center;justify-content:center;gap:9px;min-height:50px;padding:13px 20px;border-radius:12px;background:var(--navy);color:#fff;text-decoration:none;font-weight:700;font-size:16px}
+.actions a.secondary{background:#fff;color:var(--navy);border:1px solid #c8d9e3}
+.section{margin-top:28px;background:var(--paper);border:1px solid var(--line);border-radius:18px;padding:24px;box-shadow:0 8px 22px rgba(5,45,70,.07)}
+.section h2{margin:0 0 7px;color:var(--navy);font-size:25px;text-align:center}
+.section-intro{text-align:center;color:var(--muted);font-size:15px;line-height:1.5;margin:0 auto 22px;max-width:650px}
+.services{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:14px}
+.service{border:1px solid var(--line);border-radius:13px;padding:17px 17px 15px;background:#fbfdfe}
+.service h3{font-size:17px;margin:0 0 9px;color:var(--navy);display:flex;align-items:center;gap:9px}
+.service h3 .symbol{display:inline-flex;align-items:center;justify-content:center;width:31px;height:31px;flex:0 0 31px;border-radius:9px;background:#e7f2f8;color:var(--blue);font-size:17px}
+.service p{font-size:14px;line-height:1.6;margin:0;color:#35576b}
+.contact-strip{margin-top:22px;border-radius:13px;background:var(--navy);color:#fff;padding:17px 18px;display:flex;justify-content:center;gap:22px;flex-wrap:wrap}
+.contact-strip a{color:#fff;text-decoration:none;font-weight:700}
+.note{text-align:center;color:var(--muted);font-size:13px;line-height:1.5;margin:17px auto 0;max-width:700px}
+@media(max-width:620px){main{padding:14px 8px 24px}.card-wrap img{border-radius:10px}.actions a{width:100%;font-size:15px}.section{padding:18px 13px;margin-top:20px}.section h2{font-size:22px}.services{grid-template-columns:1fr;gap:10px}.service{padding:15px}.contact-strip{gap:12px;flex-direction:column;align-items:center}}
 </style>
 </head>
 <body>
@@ -32,7 +44,43 @@ main{max-width:980px;margin:0 auto;padding:22px 14px 32px}
     <a class="secondary" href="tel:+306998478440">☎ Κλήση</a>
     <a class="secondary" href="mailto:vasileioual@gmail.com">✉ Email</a>
   </div>
-  <p class="note">Πατήστε «Προσθήκη στις επαφές» για να ανοίξετε την επαγγελματική επαφή. Κατά την αποθήκευση, ο σύνδεσμος της ψηφιακής κάρτας περιλαμβάνεται στα στοιχεία της επαφής.</p>
+
+  <section class="section" aria-labelledby="services-title">
+    <h2 id="services-title">Υπηρεσίες</h2>
+    <p class="section-intro">Τοπογραφικές και τεχνικές υπηρεσίες για ακίνητα, αποτυπώσεις και ψηφιακή χαρτογράφηση.</p>
+    <div class="services">
+      <article class="service">
+        <h3><span class="symbol">⌖</span>Τοπογραφικές εργασίες</h3>
+        <p>Τοπογραφικά διαγράμματα ΕΓΣΑ ’87, αποτυπώσεις οικοπέδων και αγροτεμαχίων, χαράξεις ορίων και κτιρίων, υψομετρικές αποτυπώσεις.</p>
+      </article>
+      <article class="service">
+        <h3><span class="symbol">▤</span>Κτηματολόγιο και ακίνητα</h3>
+        <p>Έλεγχος ΚΑΕΚ και κτηματολογικών στοιχείων, εντοπισμός ακινήτων, έλεγχος αποκλίσεων και εμβαδών, διαγράμματα γεωμετρικών μεταβολών.</p>
+      </article>
+      <article class="service">
+        <h3><span class="symbol">⌂</span>Αποτυπώσεις κτιρίων</h3>
+        <p>Αποτυπώσεις υφιστάμενων κτιρίων, κατόψεις και σχέδια περιβάλλοντος χώρου, αποτυπώσεις για τεχνικές μελέτες.</p>
+      </article>
+      <article class="service">
+        <h3><span class="symbol">▧</span>Τεχνικό σχέδιο – AutoCAD</h3>
+        <p>Σύνταξη, ψηφιοποίηση και επεξεργασία τεχνικών σχεδίων, υπολογισμός εμβαδών, αποστάσεων και συντεταγμένων.</p>
+      </article>
+      <article class="service">
+        <h3><span class="symbol">◎</span>GIS και γεωπληροφορική</h3>
+        <p>Ψηφιακή χαρτογράφηση, θεματικοί χάρτες, επεξεργασία γεωγραφικών δεδομένων με GIS/QGIS και μετατροπή συντεταγμένων.</p>
+      </article>
+      <article class="service">
+        <h3><span class="symbol">▣</span>Τεχνική υποστήριξη ακινήτων</h3>
+        <p>Έλεγχος αρτιότητας, οικοδομησιμότητας και όρων δόμησης, καθώς και τοπογραφικά για οικοδομικές άδειες, ανάλογα με τις απαιτήσεις κάθε υπόθεσης.</p>
+      </article>
+    </div>
+    <div class="contact-strip">
+      <a href="tel:+306998478440">☎ 699 847 8440</a>
+      <a href="mailto:vasileioual@gmail.com">✉ vasileioual@gmail.com</a>
+    </div>
+    <p class="note">Οι υπηρεσίες παρέχονται σύμφωνα με το αντικείμενο της εργασίας, τα ισχύοντα επαγγελματικά δικαιώματα και τις απαιτήσεις κάθε υπόθεσης.</p>
+  </section>
+  <p class="note">Πατήστε «Προσθήκη στις επαφές» για να αποθηκεύσετε τα στοιχεία επικοινωνίας. Ο σύνδεσμος της ψηφιακής κάρτας περιλαμβάνεται στην επαφή.</p>
 </main>
 </body>
 </html>
